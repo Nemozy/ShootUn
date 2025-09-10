@@ -14,7 +14,7 @@ namespace Modules
             CurrentModule?.Stop();
             var battleModule = new BattleModule();
             CurrentModule = battleModule;
-            await battleModule.PreloadAssets("BattleView");
+            await battleModule.PreloadAssets("Assets/Media/Prefabs/BattleView.prefab");
             await battleModule.Connect(restart, quitGame, battleStageData);
             await Task.Delay(200);
             await battleModule.Start();

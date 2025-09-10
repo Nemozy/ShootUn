@@ -38,7 +38,7 @@ public class MainApp : MonoBehaviour
     {
         try
         {
-            _gameData = await Addressables.LoadAssetAsync<GameData>("Configs/GameData").Task;
+            _gameData = await Addressables.LoadAssetAsync<GameData>("Assets/Configs/GameData.asset").Task;
             Game.GameData = _gameData;
             var game = new Game();
             game.Connect(_gameData);
